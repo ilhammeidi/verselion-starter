@@ -1,0 +1,62 @@
+import React, { Fragment } from 'react';
+import PropTypes from 'prop-types';
+import CssBaseline from '@mui/material/CssBaseline';
+import Box from '@mui/material/Box';
+import Head from 'next/head';
+// Use this below for Server Side Render/Translation (SSR)
+// import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+// Use this below for Static Site Generation (SSG)
+import { getStaticPaths, makeStaticProps } from '~/lib/getStatic';
+import { useSpacing } from '~/theme/common';
+import Header from '~/components/Header';
+import Pricing from '~/components/Pricing';
+import Faq from '~/components/Utils/Faq';
+import Footer from '~/components/Footer';
+import brand from '~/public/text/brand';
+
+function ContactPage(props) {
+  const { classes, cx } = useSpacing();
+  const { onToggleDark, onToggleDir } = props;
+
+  return (
+    <Fragment>
+      <Head>
+        <title>
+          { brand.starter.name + ' - Pricing' }
+        </title>
+      </Head>
+      <CssBaseline />
+      <div className={classes.mainWrap}>
+        <Header
+          onToggleDark={onToggleDark}
+          onToggleDir={onToggleDir}
+        />
+        <main className={cx(classes.containerFront, classes.containerWrap)}>
+          <div className={classes.innerPage}>
+            <Box mt={{ sm: 3 }}>
+              <Pricing />
+            </Box>
+            <div className={classes.spaceTopShort}>
+              <Faq />
+            </div>
+          </div>
+        </main>
+        <Footer toggleDir={onToggleDir} />
+      </div>
+    </Fragment>
+  );
+}
+
+ContactPage.propTypes = {
+  onToggleDark: PropTypes.func.isRequired,
+  onToggleDir: PropTypes.func.isRequired,
+};
+
+export default ContactPage;
+
+// Use this below for Server Side Render/Translation (SSR)
+// export const getStaticProps = async ({ locale }) => ({ props: { ...await serverSideTranslations(locale, ['common']) } });
+
+// Use this below for Static Site Generation (SSG)
+const getStaticProps = makeStaticProps(['common']);
+export { getStaticPaths, getStaticProps };
