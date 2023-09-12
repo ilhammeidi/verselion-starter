@@ -23,9 +23,9 @@ module.exports = withImages({
   webpack: (config, options) => {
     true,
     config.plugins.push(
-      //      new ESLintPlugin({
-      //        exclude: ['node_modules']
-      //      })
+      new ESLintPlugin({
+        exclude: ['node_modules']
+      })
     );
     return config;
   }

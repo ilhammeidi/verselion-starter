@@ -93,7 +93,7 @@ function MegaMenu(props) {
                                   className={classes.menuItem}
                                   component="a"
                                   href={granditem.link}
-                                  selected={curURL === (curOrigin + langPath + granditem.link + '/' + '/')}
+                                  selected={curURL === (curOrigin + langPath + granditem.link + '/')}
                                 >
                                   <ListItemText
                                     primary={granditem.name}

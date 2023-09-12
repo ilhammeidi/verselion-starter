@@ -1,7 +1,6 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import CssBaseline from '@mui/material/CssBaseline';
-import Box from '@mui/material/Box';
 import Head from 'next/head';
 // Use this below for Server Side Render/Translation (SSR)
 // import { serverSideTranslations } from 'next-i18next/serverSideTranslations';

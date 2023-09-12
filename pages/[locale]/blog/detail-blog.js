@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import CssBaseline from '@mui/material/CssBaseline';
 import Head from 'next/head';
 import Container from '@mui/material/Container';
-import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 // Use this below for Server Side Render/Translation (SSR)
 // import { serverSideTranslations } from 'next-i18next/serverSideTranslations';

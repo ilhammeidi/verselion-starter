@@ -45,7 +45,7 @@ function Products(props) {
   const { onToggleDark, onToggleDir } = props;
 
   const { classes } = useSpacing();
-  
+
   const isDesktop = useMediaQuery(theme => theme.breakpoints.up('md'));
 
   const [openFilter, setOpenFilter] = useState(false);
