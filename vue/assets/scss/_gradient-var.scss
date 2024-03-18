@@ -1,0 +1,18 @@
+$gradient-primary-dark: linear-gradient(148deg, $palette-primary-dark 0%, $palette-primary-main 100%);
+$gradient-primary-light: linear-gradient(148deg, $palette-primary-light 0%, $palette-primary-main 100%);
+
+$gradient-secondary-dark: linear-gradient(148deg, $palette-secondary-dark 0%, $palette-secondary-main 100%);
+$gradient-secondary-light: linear-gradient(148deg, $palette-secondary-light 0%, $palette-secondary-main 100%);
+
+$gradient-accent: linear-gradient(148deg, $palette-accent-main 0%, $palette-accent-light 100%);
+
+$gradient-double-light: linear-gradient(148deg, $palette-secondary-light 0%, $palette-primary-light 100%);
+$gradient-double-main: linear-gradient(148deg, $palette-primary-main 0%, $palette-secondary-main 100%);
+$gradient-double-dark: linear-gradient(148deg, $palette-secondary-dark 0%, $palette-primary-dark 100%);
+$gradient-double-primary: linear-gradient(148deg, $palette-accent-main -20%, $palette-primary-main 80%);
+$gradient-double-secondary: linear-gradient(148deg, $palette-secondary-main 0%, $palette-primary-main 100%);
+$gradient-double-accent: linear-gradient(148deg, $palette-accent-main 0%, $palette-secondary-main 100%);
+
+$gradient-triple-light: linear-gradient(148deg, $palette-secondary-light 0%, $palette-primary-light 50%, $palette-accent-light 100%);
+$gradient-triple-main: linear-gradient(148deg, $palette-primary-main 0%, $palette-secondary-main 50%, $palette-accent-main 100%);
+$gradient-triple-dark: linear-gradient(148deg, $palette-primary-dark 0%, $palette-secondary-dark 46%, $palette-accent-dark 100%);

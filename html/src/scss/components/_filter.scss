@@ -1,0 +1,192 @@
+.filter-style {
+  @include breakpoints-down(sm) {
+    padding: $spacing4;
+    height: 100%;
+    overflow: auto;
+    width: 100%;
+  }
+  .strip {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: $spacing2;
+    line-height: 0px;
+  }
+  .filter-block {
+    margin-bottom: 50px;
+    .collection {
+      border: none;
+      &-header {
+        border: none;
+        font-size: 16px;
+        @include palette-text-secondary
+      }
+      &-item.active {
+        @include use-theme(background-color, $palette-primary-light, $palette-primary-dark);
+        @include use-theme(color, $palette-primary-dark, $palette-primary-light);
+      }
+    }
+    .label-block {
+      display: block;
+      cursor: pointer;
+    }
+  }
+  .collection-item {
+    display: block;
+    border: none;
+    label {
+      margin-bottom: 0
+    }
+  }
+  .star {
+    display: block
+  }
+  .star-icon {
+    color: #FFC107
+  }
+  .star-icon-disable {
+    .theme--light & {
+      color: $light-divider;
+    }
+    .theme--dark & {
+      color: $dark-divider;
+    }
+  }
+  .btn-tag {
+    position: relative;
+    cursor: pointer;
+    label {
+      display: inline-block;
+      padding: 1px 6px;
+      margin: 4px;
+      border-radius: $rounded-small;
+      border: 1px solid $palette-primary-main;
+      cursor: pointer;
+      position: relative;
+      transition: all 0.3s ease;
+      @include palette-background-default;
+    }
+    input {
+      opacity: 0;
+      position: absolute;
+      &:checked + label {
+        color: $palette-common-white;
+        background: $palette-primary-main;
+      }
+    }
+  }
+  .input-price {
+    width: 75px;
+    display: inline-block;
+  }
+  .apply-range {
+    @include rtl-flip
+  }
+  &.modal-content {
+    padding: 0;
+    border: none;
+  }
+}
+
+.modal-filter {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  border: none;
+  &.modal-content {
+    padding-top: $spacing8
+  }
+}
+
+nav.filter-head {
+  background: $palette-primary-main;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  .nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $palette-common-white;
+    button {
+      color: $palette-common-white;
+      margin: $spacing1
+    }
+  }
+}
+
+.sorter {
+  .input-field {
+    flex: 1;
+  }
+  @include breakpoints-down(xs) {
+    flex-direction: column-reverse;
+    .btn {
+      white-space: nowrap;
+    }
+  }
+  .toggle-btn-group {
+    display: flex;
+    .btn {
+      border-radius: 0;
+      i {
+        font-size: 24px
+      }
+      &.active {
+        @include use-theme(background-color, $palette-primary-main !important, $palette-primary-dark !important);
+        color: $palette-primary-light !important;
+      }
+    }
+    > .btn:not(:last-child) {
+      border-right: none;
+    }
+    > .btn:first-child {
+      border-top-left-radius: 4px;
+      border-bottom-left-radius: 4px;
+      @include rtl-flip
+    }
+    > .btn:last-child {
+      border-top-right-radius: 4px;
+      border-bottom-right-radius: 4px;
+      @include rtl-flip
+    }
+  }
+}
+
+.search-banner {
+  height: 520px;
+  display: flex;
+  align-items: center;
+  @include use-theme(background-color, $palette-primary-light, $palette-primary-dark);
+  .search {
+    position: relative;
+    display: flex;
+    margin: $spacing4 auto;
+    align-items: center;
+    @include breakpoints-up(sm) {
+      width: 600px;
+    }
+    fieldset {
+      height: 41px;
+    }
+    .input-field {
+      @include padding-left($spacing2);
+      border-radius: $rounded-small;
+      min-height: 0;
+      margin-bottom: 0;
+      width: 100%;
+      border: 1px solid;
+      @include use-theme(border-color, $light-text-secondary, $dark-text-secondary);
+      .prefix {
+        @include left($spacing1)
+      }
+      input {
+        max-height: none;
+        border: none !important;
+        box-shadow: none !important;
+        margin-bottom: 0;
+      }
+    }
+  }
+}

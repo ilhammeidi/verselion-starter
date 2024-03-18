@@ -1,0 +1,295 @@
+@mixin title-style {
+  font-size: 48px;
+  line-height: 62px;
+  text-Transform: 'capitalize';
+  font-weight: 700;
+  margin-bottom: 40px;
+  position: relative
+}
+
+.use-text {
+  &-title {
+    font-weight: $font-bold;
+    font-size: 48px;
+    line-height: 72px;
+    @include breakpoints-down(md) {
+      font-size: 38px;
+      line-height: 60px;
+    }
+    @include breakpoints-down(sm) {
+      font-size: 28px;
+      line-height: 44px;
+    }
+  }
+  &-title2 {
+    font-size: 36px;
+    line-height: 56px;
+    font-weight: $font-bold;
+    @include breakpoints-down(md) {
+      font-size: 32px;
+      line-height: 48px;
+    }
+    @include breakpoints-down(sm) {
+      font-size: 24px;
+      line-height: 36px;
+    }
+  }
+  &-subtitle {
+    font-weight: $font-medium;
+    font-size: 28px;
+    line-height: 44px;
+    @include breakpoints-down(md) {
+      font-size: 24px;
+      line-height: 36px;
+    }
+    @include breakpoints-down(sm) {
+      font-size: 18px;
+      line-height: 28px;
+    }
+  }
+  &-subtitle2 {
+    font-weight: $font-regular;
+    font-size: 22px;
+    line-height: 32px;
+    @include breakpoints-down(md) {
+      font-size: 20px;
+      line-height: 32px
+    }
+    @include breakpoints-down(sm) {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+  &-paragraph {
+    font-weight: $font-regular;
+    font-size: 16px;
+    line-height: 24px
+  }
+  &-caption {
+    font-weight: $font-regular;
+    font-size: 12px;
+    line-height: 18px;
+  }
+  &-medium {
+    font-weight: $font-medium
+  }
+  &-bold {
+    font-weight: $font-bold
+  }
+  &-title-primary {
+    @include title-style;
+    .v-theme--dark & {
+      color: $palette-primary-light
+    }
+    .v-theme--light & {
+      color: $palette-primary-dark
+    }
+  }
+  &-title-secondary {
+    @include title-style;
+    .v-theme--dark & {
+      color: $palette-secondary-light
+    }
+    .v-theme--light & {
+      color: $palette-secondary-dark
+    }
+  }
+  &-primary {
+    .v-theme--dark & {
+      color: $palette-primary-light
+    }
+    .v-theme--light & {
+      color: $palette-primary-dark
+    }
+  }
+  &-secondary {
+    .v-theme--dark & {
+      color: $palette-secondary-light
+    }
+    .v-theme--light & {
+      color: $palette-secondary-dark
+    }
+  }
+  &-primary-color {
+    color: $palette-primary-main
+  }
+  &-secondary-color {
+    color: $palette-secondary-main
+  }
+  &-accent-color {
+    color: $palette-accent-main
+  }
+}
+
+.use-text-grd {
+  &-primary-dark {
+    background: $gradient-primary-dark;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &-primary-light {
+    background: $gradient-primary-light;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &-secondary-dark {
+    background: $gradient-secondary-dark;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &-secondary-light {
+    background: $gradient-secondary-light;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &-accent {
+    background: $gradient-accent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &-double-light {
+    background: $gradient-double-light;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &-double-main {
+    background: $gradient-double-main;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &-double-dark {
+    background: $gradient-double-dark;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &-triple-light {
+    background: $gradient-triple-light;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &-triple-main {
+    background: $gradient-triple-main;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &-triple-dark {
+    background: $gradient-triple-dark;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &-success {
+    background-image: linear-gradient(153deg, #84FF95 0%, #006064 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &-error {
+    background-image: linear-gradient(153deg, #FFBABA 0%, #FF0000 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &-pending {
+    background-image: linear-gradient(153deg, #FFEA84 0%, #FF9000 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &-disabled {
+    background-image: linear-gradient(153deg, #FFEA84 0%, #FF9000 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.use-bg {
+  &-primary-main {
+    background-color: $palette-primary-main;
+    color: #FFF
+  }
+  &-primary-light {
+    background-color: $palette-primary-light;
+    color: $palette-primary-dark
+  }
+  &-primary-dark {
+    background-color: $palette-primary-dark;
+    color: #FFF;
+  }
+  &-secondary-main {
+    background-color: $palette-secondary-main;
+    color: #FFF;
+  }
+  &-secondary-light {
+    background-color: $palette-secondary-light;
+    color: $palette-secondary-dark;
+  }
+  &-secondary-dark {
+    background-color: $palette-secondary-dark;
+    color: #FFF;
+  }
+  &-accent-main {
+    background-color: $palette-accent-main;
+    color: #FFF;
+  }
+  &-accent-light {
+    background-color: $palette-accent-light;
+    color: $palette-accent-dark,
+  }
+  &-accent-dark {
+    background-color: $palette-accent-dark;
+    color: #FFF;
+  }
+  &-accent2-main {
+    background-color: #00BCD4;
+    color: #FFF;
+  }
+  &-accent2-light {
+    background-color: #B2EBF2;
+    color: #006064
+  }
+  &-accent2-dark {
+    background-color: #00838F;
+    color: #FFF
+  }
+}
+
+.use-hidden {
+  &-lg-down {
+    @include breakpoints-down(lg) {
+      display: none;
+    }
+  }
+  &-md-down {
+    @include breakpoints-down(md) {
+      display: none;
+    }
+  }
+  &-sm-down {
+    @include breakpoints-down(sm) {
+      display: none;
+    }
+  }
+  &-xs-down {
+    @include breakpoints-down(sm) {
+      display: none;
+    }
+  }
+  &-lg-up {
+    @include breakpoints-up(lg) {
+      display: none;
+    }
+  }
+  &-md-up {
+    @include breakpoints-up(md) {
+      display: none;
+    }
+  }
+  &-sm-up {
+    @include breakpoints-up(sm) {
+      display: none;
+    }
+  }
+}
+
+.use-rtl-flip {
+  .v-locale--is-rtl & {
+    transform: scale(-1)
+  }
+}

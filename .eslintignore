@@ -1,3 +1,11 @@
 **/node_modules/*
 **/out/*
 **/.next/*
+*.log*
+**/.nuxt/*
+**/.nitro/*
+**/.cache/*
+**/.output/*
+.env
+**/dist/*
+.DS_Store

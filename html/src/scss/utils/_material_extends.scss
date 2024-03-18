@@ -1,0 +1,469 @@
+// Additional body height
+html {
+  height: 100%;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+body {
+  min-height: 100%;
+}
+
+// Additional Button Styles
+$btn-radius: 6px !default;
+
+@mixin btn-hover {
+  &:before {
+    border-radius: $btn-radius;
+    bottom: 0;
+    color: inherit;
+    content: "";
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: currentColor;
+    -webkit-transition: opacity 0.2s cubic-bezier(0.4, 0, 0.6, 1);
+    transition: opacity 0.2s cubic-bezier(0.4, 0, 0.6, 1);
+  }
+  &:hover {
+    &:before {
+      opacity: 0.06
+    }
+  }
+}
+
+@mixin btn-style($border: none, $radius: 6px) {
+  text-decoration: none;
+  text-align: center;
+  letter-spacing: .5px;
+  -webkit-transition: background-color .2s ease-out;
+  transition: background-color .2s ease-out;
+  cursor: pointer;
+  outline: 0;
+  border: $border;
+  font-weight: $font-bold;
+  border-radius: $radius;
+  display: inline-block;
+  text-transform: uppercase;
+  vertical-align: middle;
+  -webkit-tap-highlight-color: transparent;
+  @include btn-hover;
+  &:not(.btn-small):not(.btn-large) {
+    padding: 8px 24px;
+    font-size: 14px;
+    min-height: 36px;
+    line-height: 24px;
+    height: auto;
+  }
+}
+
+.btn {
+  border-radius: 4px;
+  background: none;
+  position: relative;
+  font-weight: $font-bold;
+  @include btn-style;
+  i.right {
+    @include margin-left(4px)
+  }
+  i.left {
+    @include margin-right(4px)
+  }
+  &.block {
+    width: 100%;
+  }
+  
+  &-default {
+    @include palette-background-button;
+  }
+  &.primary {
+    background-color: $palette-primary-main;
+  }
+  &.primary-light {
+    background-color: $palette-primary-light;
+    color: $palette-primary-dark !important;
+  }
+  &.secondary {
+    background-color: $palette-secondary-main;
+    color: $palette-common-black;
+    &:not(.btn-outlined):hover {
+      color: $palette-common-black !important;
+    }
+  }
+  &.secondary-light {
+    background-color: $palette-secondary-light;
+    color: $palette-secondary-dark !important;
+  }
+  &.black {
+    background-color: $palette-common-black;
+    .waves-ripple {
+      background: rgba($palette-common-white, 0.4);
+    }
+  }
+  &.white {
+    background-color: $palette-common-white;
+    color: $palette-common-black;
+  }
+  &.black-white {
+    @include use-theme(color, $palette-common-white, $palette-common-black);
+    @include use-theme(background-color, $palette-common-black, $palette-common-white)
+  }
+  &-flat {
+    font-weight: $font-medium;
+    i.right {
+      @include margin-left(4px)
+    }
+    i.left {
+      @include margin-right(4px)
+    }
+    &.primary-text {
+      color: $palette-primary-main;
+    }
+    &.secondary-text {
+      color: $palette-secondary-main;
+      &:hover {
+        color: $palette-secondary-main;
+      }
+    }
+    &.accent-text {
+      color: $palette-accent-main;
+      &:hover {
+        color: $palette-accent-main;
+      }
+    }
+    &:hover {
+      background: none;
+    }
+  }
+  &-icon {
+    @include btn-style(none, 50% !important);
+    @include palette-text-secondary;
+    box-shadow: none !important;
+    padding: 0 !important;
+    width: 36px;
+    height: 36px;
+    i {
+      line-height: 36px;
+    }
+    &:before {
+      border-radius: 50%;
+    }
+    &.invert {
+      color: $palette-common-white
+    }
+  }
+  &-outlined {
+    position: relative;
+    background-color: transparent !important;
+    @include btn-style(1px solid);
+    @include use-theme(border-color, $light-text-primary, $dark-text-primary);
+    box-shadow: none !important;
+    &.primary {
+      @include use-theme(color, $palette-primary-main, $palette-primary-light);
+      @include use-theme(border-color, $palette-primary-main, $palette-primary-light);
+      .waves-ripple {
+        background: $palette-primary-light
+      }
+    }
+    &.secondary {
+      @include use-theme(color, $palette-secondary-dark, $palette-secondary-main);
+      @include use-theme(border-color, $palette-secondary-dark, $palette-secondary-main);
+      .waves-ripple {
+        background: rgba(var(--v-theme-secondarylight), 0.4);
+      }
+    }
+    &.white {
+      color: $palette-common-white;
+      border-color: $palette-common-white;
+    }
+    &.black {
+      color: $palette-common-black;
+      border-color: $palette-common-black;
+    }
+    &.black-white {
+      @include use-theme(color, $palette-common-black, $palette-common-white);
+      @include use-theme(border-color, $palette-common-black, $palette-common-white)
+    }
+  }
+  &-floating {
+    &.primary {
+      background: $palette-primary-main !important;
+    }
+    &.secondary {
+      background: $palette-secondary-main !important;
+    }
+  }
+  @include btn-hover;
+}
+
+// Font Icons
+.icon {
+  &.primary {
+    color: $palette-primary-main !important;
+  }
+  &.secondary {
+    color: $palette-secondary-main !important;
+  }
+}
+
+// Collection Item
+.collection .collection-item {
+  background: none;
+}
+
+.collection-item.no-hover:hover{
+  background: none;
+}
+
+.collection {
+  a.collection-item{
+    @include palette-text-primary
+  }
+}
+
+.collection .collection-item.avatar:not(.circle-clipper) > .round,
+.collection .collection-item.avatar :not(.circle-clipper) > .round,
+.collection .collection-item.avatar:not(.circle-clipper) > .square,
+.collection .collection-item.avatar :not(.circle-clipper) > .square {
+  position: absolute;
+  width: 52px;
+  height: 52px;
+  overflow: hidden;
+  left: 12px;
+  top: 12px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.collection .collection-item.active {
+  @include use-theme(color, $palette-primary-dark, $palette-primary-light)
+}
+
+.round {
+  border-radius: $rounded-small
+}
+
+// Collapsible Accordion
+.collapsible {
+  box-shadow: none;
+  border: none;
+}
+
+// Typography
+.m-application .display-4 {
+  font-size: 6rem !important;
+  font-weight: 300;
+  line-height: 6rem;
+  letter-spacing: -0.015625em !important;
+}
+.m-application .display-3 {
+  font-size: 3.75rem !important;
+  font-weight: 300;
+  line-height: 3.75rem;
+  letter-spacing: -0.0083333333em !important;
+}
+.m-application .display-2 {
+  font-size: 3rem !important;
+  font-weight: 400;
+  line-height: 3.125rem;
+  letter-spacing: normal !important;
+}
+.m-application .display-1 {
+  font-size: 2.125rem !important;
+  font-weight: 400;
+  line-height: 2.5rem;
+  letter-spacing: 0.0073529412em !important;
+}
+.m-application .headline {
+  font-size: 1.5rem !important;
+  font-weight: 400;
+  line-height: 2rem;
+  letter-spacing: normal !important;
+}
+.m-application .title {
+  font-size: 1.25rem !important;
+  font-weight: 500;
+  line-height: 2rem;
+  letter-spacing: 0.0125em !important;
+}
+.m-application .subtitle-1 {
+  font-size: 1rem !important;
+  font-weight: 400;
+  letter-spacing: 0.009375em !important;
+  line-height: 1.75rem;
+}
+.m-application .subtitle-2 {
+  font-size: 0.875rem !important;
+  font-weight: 500;
+  letter-spacing: 0.0071428571em !important;
+  line-height: 1.375rem;
+}
+.m-application .body-2 {
+  font-size: 0.875rem !important;
+  font-weight: 400;
+  letter-spacing: 0.0178571429em !important;
+  line-height: 1.25rem;
+}
+.m-application .body-1 {
+  font-size: 1rem !important;
+  font-weight: 400;
+  letter-spacing: 0.03125em !important;
+  line-height: 1.5rem;
+}
+.m-application .caption {
+  font-size: 0.75rem !important;
+  font-weight: 400;
+  letter-spacing: 0.0333333333em !important;
+  line-height: 1.25rem;
+}
+.m-application .overline {
+  font-size: 0.625rem !important;
+  font-weight: 400;
+  letter-spacing: 0.1666666667em !important;
+  line-height: 1rem;
+  text-transform: uppercase;
+}
+.m-application p {
+  margin-bottom: 16px;
+}
+
+// Avatar
+.avatar-img {
+  width: 42px;
+  height: 42px;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 50%;
+  img {
+    width: 100%;
+  }
+  &.icon {
+    @include use-theme(background-color, #bdbdbd, #757575);
+    @include use-theme(color, #fff, #121212);
+  }
+  &.small {
+    width: 24px;
+    height: 24px;
+  }
+  &.big {
+    width: 56px;
+    height: 56px;
+  }
+  &.bigger {
+    width: 92px;
+    height: 92px;
+  }
+}
+
+// Container
+.dropdown-content {
+  border-radius: $rounded-small;
+}
+
+// Form
+.select {
+  &-outlined {
+    .select-wrapper input.select-dropdown {
+      border: 1px solid var(--div-2);
+      border-radius: $spacing1 * 0.5;
+      @include padding-left($spacing1);
+      box-sizing: border-box;
+    }
+  }
+}
+
+.input-field {
+  input:-internal-autofill-selected {
+    background-color: transparent !important;
+    box-shadow: rgb(38, 103, 152) 0px 0px 0px 100px inset !important;
+    -webkit-text-fill-color: rgb(255, 255, 255);
+    caret-color: rgb(255, 255, 255);
+    border-radius: inherit;
+  }
+  &.primary {
+    input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):focus:not([readonly]), input[type=password]:not(.browser-default):focus:not([readonly]), input[type=email]:not(.browser-default):focus:not([readonly]), input[type=url]:not(.browser-default):focus:not([readonly]), input[type=time]:not(.browser-default):focus:not([readonly]), input[type=date]:not(.browser-default):focus:not([readonly]), input[type=datetime]:not(.browser-default):focus:not([readonly]), input[type=datetime-local]:not(.browser-default):focus:not([readonly]), input[type=tel]:not(.browser-default):focus:not([readonly]), input[type=number]:not(.browser-default):focus:not([readonly]), input[type=search]:not(.browser-default):focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
+      border-bottom-color: $palette-primary-main;
+      box-shadow: 0 1px 0 0 $palette-primary-main;
+    }
+    input:not([type]):focus:not([readonly]) + label, input[type=text]:not(.browser-default):focus:not([readonly]) + label, input[type=password]:not(.browser-default):focus:not([readonly]) + label, input[type=email]:not(.browser-default):focus:not([readonly]) + label, input[type=url]:not(.browser-default):focus:not([readonly]) + label, input[type=time]:not(.browser-default):focus:not([readonly]) + label, input[type=date]:not(.browser-default):focus:not([readonly]) + label, input[type=datetime]:not(.browser-default):focus:not([readonly]) + label, input[type=datetime-local]:not(.browser-default):focus:not([readonly]) + label, input[type=tel]:not(.browser-default):focus:not([readonly]) + label, input[type=number]:not(.browser-default):focus:not([readonly]) + label, input[type=search]:not(.browser-default):focus:not([readonly]) + label, textarea.materialize-textarea:focus:not([readonly]) + label {
+      color: $palette-primary-main
+    }
+  }
+  &.secondary {
+    input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):focus:not([readonly]), input[type=password]:not(.browser-default):focus:not([readonly]), input[type=email]:not(.browser-default):focus:not([readonly]), input[type=url]:not(.browser-default):focus:not([readonly]), input[type=time]:not(.browser-default):focus:not([readonly]), input[type=date]:not(.browser-default):focus:not([readonly]), input[type=datetime]:not(.browser-default):focus:not([readonly]), input[type=datetime-local]:not(.browser-default):focus:not([readonly]), input[type=tel]:not(.browser-default):focus:not([readonly]), input[type=number]:not(.browser-default):focus:not([readonly]), input[type=search]:not(.browser-default):focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
+      border-bottom-color: $palette-secondary-main;
+      box-shadow: 0 1px 0 0 $palette-secondary-main;
+    }
+    input:not([type]):focus:not([readonly]) + label, input[type=text]:not(.browser-default):focus:not([readonly]) + label, input[type=password]:not(.browser-default):focus:not([readonly]) + label, input[type=email]:not(.browser-default):focus:not([readonly]) + label, input[type=url]:not(.browser-default):focus:not([readonly]) + label, input[type=time]:not(.browser-default):focus:not([readonly]) + label, input[type=date]:not(.browser-default):focus:not([readonly]) + label, input[type=datetime]:not(.browser-default):focus:not([readonly]) + label, input[type=datetime-local]:not(.browser-default):focus:not([readonly]) + label, input[type=tel]:not(.browser-default):focus:not([readonly]) + label, input[type=number]:not(.browser-default):focus:not([readonly]) + label, input[type=search]:not(.browser-default):focus:not([readonly]) + label, textarea.materialize-textarea:focus:not([readonly]) + label {
+      color: $palette-secondary-main
+    }
+  }
+  .prefix {
+    width: auto;
+    @include left(0);
+  }
+  .suffix {
+    position: absolute;
+    transition: color 0.2s;
+    top: 0.5rem;
+    @include right(0)
+  }
+}
+
+[type=checkbox].filled-in.primary:checked + span:not(.lever):after {
+  border: 2px solid $palette-primary-main;
+  background-color: $palette-primary-main;
+}
+
+[type=checkbox].filled-in.secondary:checked + span:not(.lever):after {
+  border: 2px solid $palette-secondary-main;
+  background-color: $palette-secondary-main;
+}
+
+[type=checkbox].filled-in:checked + span:not(.lever):before {
+  @include use-rtl(transform, rotateZ(30deg) scaleX(-1))
+}
+
+.justify-content-evenly {
+  justify-content: space-evenly !important;
+}
+
+.dropdown-divider {
+  @include palette-divider
+}
+
+// Toast icon
+.toast .toast-action {
+  color: #FFF;
+  @include margin-right(-12px)
+}
+
+
+// Modal
+.modal.bottom-sheet {
+  max-height: 90%;
+  width: 100%;
+  border-radius: $rounded-small $rounded-small 0 0 
+}
+
+.modal-content {
+  @include palette-background-paper;
+}
+
+
+// x-scroll mobile
+.scroll-tablet {
+  @include breakpoints-down(md) {
+    overflow-x: auto;
+    overflow-y: visible;
+    flex-wrap: nowrap;
+  }
+}
+
+// tooltip
+.material-tooltip {
+  right: auto;
+}

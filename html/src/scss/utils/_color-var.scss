@@ -1,0 +1,542 @@
+@mixin cyber {
+  --v-theme-anchor-base: 0, 229, 255;
+  --v-theme-primarylight: 209, 196, 233;
+  --v-theme-primary: 101, 31, 255;
+  --v-theme-primarydark: 49, 27, 146;
+  --v-theme-secondarylight: 132, 255, 255;
+  --v-theme-secondary: 0, 229, 255;
+  --v-theme-secondarydark: 0, 96, 100;
+  --v-theme-accentlight: 248, 187, 208;
+  --v-theme-accent: 255, 64, 129;
+  --v-theme-accentdark: 216, 27, 96;
+}
+
+.cyber-var {
+  @include cyber;
+
+  .v-theme--light,
+  .v-theme--dark {
+    @include cyber;
+  }
+}
+
+@mixin cartoon {
+  --v-theme-anchor-base: 255, 214, 0;
+  --v-theme-primaryLight: 209, 196, 233;
+  --v-theme-primary: 101, 31, 255;
+  --v-theme-primaryDark: 49, 27, 146;
+  --v-theme-secondaryLight: 255, 255, 141;
+  --v-theme-secondary: 255, 214, 0;
+  --v-theme-secondaryDark: 245, 127, 23;
+  --v-theme-accentLight: 178, 223, 219;
+  --v-theme-accent: 29, 233, 182;
+  --v-theme-accentDark: 0, 105, 92;
+}
+
+.cartoon-var {
+  @include cartoon;
+
+  .v-theme--light,
+  .v-theme--dark {
+    @include cartoon;
+  }
+}
+
+@mixin future-dark {
+  --v-theme-anchor-base: 29, 233, 182;
+  --v-theme-primaryLight: 225, 190, 231;
+  --v-theme-primary: 170, 0, 255;
+  --v-theme-primaryDark: 106, 27, 154;
+  --v-theme-secondaryLight: 178, 223, 219;
+  --v-theme-secondary: 29, 233, 182;
+  --v-theme-secondaryDark: 0, 105, 92;
+  --v-theme-accentLight: 255, 205, 210;
+  --v-theme-accent: 255, 82, 82;
+  --v-theme-accentDark: 183, 28, 28;
+}
+
+@mixin future-light {
+  --v-theme-anchor-base: 170, 0, 255;
+  --v-theme-primaryLight: 225, 190, 231;
+  --v-theme-primary: 170, 0, 255;
+  --v-theme-primaryDark: 106, 27, 154;
+  --v-theme-secondaryLight: 178, 223, 219;
+  --v-theme-secondary: 29, 233, 182;
+  --v-theme-secondaryDark: 0, 105, 92;
+  --v-theme-accentLight: 255, 205, 210;
+  --v-theme-accent: 255, 82, 82;
+  --v-theme-accentDark: 183, 28, 28;
+}
+
+.future-var {
+  @include future-dark;
+
+  .v-theme--light {
+    @include future-light;
+  }
+  .v-theme--dark {
+    @include future-dark;
+  }
+}
+
+@mixin violeta {
+  --v-theme-anchor-base: 139, 195, 74;
+  --v-theme-primaryLight: 225, 190, 231;
+  --v-theme-primary: 156, 39, 176;
+  --v-theme-primaryDark: 106, 27, 154;
+  --v-theme-secondaryLight: 220, 237, 200;
+  --v-theme-secondary: 139, 195, 74;
+  --v-theme-secondaryDark: 85, 139, 47;
+  --v-theme-accentLight: 255, 236, 179;
+  --v-theme-accent: 255, 193, 7;
+  --v-theme-accentDark: 255, 111, 0;
+}
+
+.violeta-var {
+  @include violeta;
+
+  .v-theme--light,
+  .v-theme--dark {
+    @include violeta;
+  }
+}
+
+@mixin coinz {
+  --v-theme-anchor-base: 255, 160, 0;
+  --v-theme-primaryLight: 225, 190, 231;
+  --v-theme-primary: 156, 39, 176;
+  --v-theme-primaryDark: 106, 27, 154;
+  --v-theme-secondaryLight: 255, 236, 179;
+  --v-theme-secondary: 255, 160, 0;
+  --v-theme-secondaryDark: 255, 111, 0;
+  --v-theme-accentLight: 209, 196, 233;
+  --v-theme-accent: 103, 58, 183;
+  --v-theme-accentDark: 69, 39, 160;
+}
+
+.coinz-var {
+  @include coinz;
+
+  .v-theme--light,
+  .v-theme--dark {
+    @include coinz;
+  }
+}
+
+@mixin rose {
+  --v-theme-anchor-base: 255, 152, 0;
+  --v-theme-primaryLight: 248, 187, 208;
+  --v-theme-primary: 233, 30, 99;
+  --v-theme-primaryDark: 173, 20, 87;
+  --v-theme-secondaryLight: 255, 224, 178;
+  --v-theme-secondary: 255, 152, 0;
+  --v-theme-secondaryDark: 230, 81, 0;
+  --v-theme-accentLight: 178, 235, 242;
+  --v-theme-accent: 0, 188, 212;
+  --v-theme-accentDark: 0, 96, 100;
+}
+
+.rose-var {
+  @include rose;
+
+  .v-theme--light,
+  .v-theme--dark {
+    @include rose;
+  }
+}
+
+@mixin vampire {
+  --v-theme-anchor-base: 96, 125, 139;
+  --v-theme-primaryLight: 255, 235, 238;
+  --v-theme-primary: 244, 67, 54;
+  --v-theme-primaryDark: 229, 57, 53;
+  --v-theme-secondaryLight: 236, 239, 241;
+  --v-theme-secondary: 96, 125, 139;
+  --v-theme-secondaryDark: 69, 90, 100;
+  --v-theme-accentLight: 248, 187, 208;
+  --v-theme-accent: 233, 30, 99;
+  --v-theme-accentDark: 173, 20, 87;
+}
+
+.vampire-var {
+  @include vampire;
+
+  .v-theme--light,
+  .v-theme--dark {
+    @include vampire;
+  }
+}
+
+@mixin emperor {
+  --v-theme-anchor-base: 255, 171, 0;
+  --v-theme-primaryLight: 255, 138, 128;
+  --v-theme-primary: 255, 23, 68;
+  --v-theme-primaryDark: 183, 28, 28;
+  --v-theme-secondaryLight: 255, 229, 127;
+  --v-theme-secondary: 255, 171, 0;
+  --v-theme-secondaryDark: 255, 111, 0;
+  --v-theme-accentLight: 200, 230, 201;
+  --v-theme-accent: 0, 230, 118;
+  --v-theme-accentDark: 46, 125, 50;
+}
+
+.emperor-var {
+  @include emperor;
+
+  .v-theme--light,
+  .v-theme--dark {
+    @include emperor;
+  }
+}
+
+@mixin sunrise {
+  --v-theme-anchor-base: 255, 193, 7;
+  --v-theme-primaryLight: 187, 222, 251;
+  --v-theme-primary: 33, 150, 243;
+  --v-theme-primaryDark: 21, 101, 192;
+  --v-theme-secondaryLight: 255, 236, 179;
+  --v-theme-secondary: 255, 193, 7;
+  --v-theme-secondaryDark: 255, 111, 0;
+  --v-theme-accentLight: 178, 235, 242;
+  --v-theme-accent: 0, 188, 212;
+  --v-theme-accentDark: 0, 131, 143;
+}
+
+.sunrise-var {
+  @include sunrise;
+
+  .v-theme--light,
+  .v-theme--dark {
+    @include sunrise;
+  }
+}
+
+@mixin cloud {
+  --v-theme-anchor-base: 255, 152, 0;
+  --v-theme-primaryLight: 179, 229, 252;
+  --v-theme-primary: 3, 169, 244;
+  --v-theme-primaryDark: 1, 87, 155;
+  --v-theme-secondaryLight: 255, 224, 178;
+  --v-theme-secondary: 255, 152, 0;
+  --v-theme-secondaryDark: 230, 81, 0;
+  --v-theme-accentLight: 197, 202, 233;
+  --v-theme-accent: 48, 79, 254;
+  --v-theme-accentDark: 26, 35, 126;
+}
+
+.cloud-var {
+  @include cloud;
+
+  .v-theme--light,
+  .v-theme--dark {
+    @include cloud;
+  }
+}
+
+@mixin smart {
+  --v-theme-anchor-base: 255, 160, 0;
+  --v-theme-primaryLight: 178, 235, 242;
+  --v-theme-primary: 0, 188, 212;
+  --v-theme-primaryDark: 0, 131, 143;
+  --v-theme-secondaryLight: 255, 236, 179;
+  --v-theme-secondary: 255, 160, 0;
+  --v-theme-secondaryDark: 255, 111, 0;
+  --v-theme-accentLight: 248, 187, 208;
+  --v-theme-accent: 233, 30, 99;
+  --v-theme-accentDark: 173, 20, 87;
+}
+
+.smart-var {
+  @include smart;
+
+  .v-theme--light,
+  .v-theme--dark {
+    @include smart;
+  }
+}
+
+@mixin fresh {
+  --v-theme-anchor-base: 76, 175, 80;
+  --v-theme-primaryLight: 179, 229, 252;
+  --v-theme-primary: 3, 169, 244;
+  --v-theme-primaryDark: 1, 87, 155;
+  --v-theme-secondaryLight: 200, 230, 201;
+  --v-theme-secondary: 76, 175, 80;
+  --v-theme-secondaryDark: 27, 94, 32;
+  --v-theme-accentLight: 248, 187, 208;
+  --v-theme-accent: 233, 30, 99;
+  --v-theme-accentDark: 173, 20, 87;
+}
+
+.fresh-var {
+  @include fresh;
+
+  .v-theme--light,
+  .v-theme--dark {
+    @include fresh;
+  }
+}
+
+@mixin mint {
+  --v-theme-anchor-base: 76, 175, 80;
+  --v-theme-primaryLight: 179, 229, 252;
+  --v-theme-primary: 3, 169, 244;
+  --v-theme-primaryDark: 1, 87, 155;
+  --v-theme-secondaryLight: 200, 230, 201;
+  --v-theme-secondary: 76, 175, 80;
+  --v-theme-secondaryDark: 46, 125, 50;
+  --v-theme-accentLight: 178, 235, 242;
+  --v-theme-accent: 0, 188, 212;
+  --v-theme-accentDark: 0, 131, 143;
+}
+
+.mint-var {
+  @include mint;
+
+  .v-theme--light,
+  .v-theme--dark {
+    @include mint;
+  }
+}
+
+@mixin queen {
+  --v-theme-anchor-base: 240, 98, 146;
+  --v-theme-primaryLight: 224, 247, 250;
+  --v-theme-primary: 0, 188, 212;
+  --v-theme-primaryDark: 0, 96, 100;
+  --v-theme-secondaryLight: 252, 228, 236;
+  --v-theme-secondary: 240, 98, 146;
+  --v-theme-secondaryDark: 173, 20, 87;
+  --v-theme-accentLight: 197, 202, 233;
+  --v-theme-accent: 48, 79, 254;
+  --v-theme-accentDark: 26, 35, 126;
+}
+
+.queen-var {
+  @include queen;
+
+  .v-theme--light,
+  .v-theme--dark {
+    @include queen;
+  }
+}
+
+@mixin oceanBlue {
+  --v-theme-anchor-base: 0, 188, 212;
+  --v-theme-primaryLight: 187, 222, 251;
+  --v-theme-primary: 33, 150, 243;
+  --v-theme-primaryDark: 13, 71, 161;
+  --v-theme-secondaryLight: 178, 235, 242;
+  --v-theme-secondary: 0, 188, 212;
+  --v-theme-secondaryDark: 0, 96, 100;
+  --v-theme-accentLight: 237, 231, 246;
+  --v-theme-accent: 101, 31, 255;
+  --v-theme-accentDark: 69, 39, 160;
+}
+
+.oceanBlue-var {
+  @include oceanBlue;
+
+  .v-theme--light,
+  .v-theme--dark {
+    @include oceanBlue;
+  }
+}
+
+@mixin deepBlue {
+  --v-theme-anchor-base: 3, 169, 244;
+  --v-theme-primaryLight: 232, 234, 246;
+  --v-theme-primary: 63, 81, 181;
+  --v-theme-primaryDark: 40, 53, 147;
+  --v-theme-secondaryLight: 225, 245, 254;
+  --v-theme-secondary: 3, 169, 244;
+  --v-theme-secondaryDark: 2, 119, 189;
+  --v-theme-accentLight: 197, 202, 233;
+  --v-theme-accent: 48, 79, 254;
+  --v-theme-accentDark: 26, 35, 126;
+}
+
+.deepBlue-var {
+  @include deepBlue;
+
+  .v-theme--light,
+  .v-theme--dark {
+    @include deepBlue;
+  }
+}
+
+@mixin leaf {
+  --v-theme-anchor-base: 96, 125, 139;
+  --v-theme-primaryLight: 200, 230, 201;
+  --v-theme-primary: 76, 175, 80;
+  --v-theme-primaryDark: 27, 94, 32;
+  --v-theme-secondaryLight: 207, 216, 220;
+  --v-theme-secondary: 96, 125, 139;
+  --v-theme-secondaryDark: 55, 71, 79;
+  --v-theme-accentLight: 178, 235, 242;
+  --v-theme-accent: 0, 188, 212;
+  --v-theme-accentDark: 0, 96, 100;
+}
+
+.leaf-var {
+  @include leaf;
+
+  .v-theme--light,
+  .v-theme--dark {
+    @include leaf;
+  }
+}
+
+@mixin money {
+  --v-theme-anchor-base: 255, 160, 0;
+  --v-theme-primaryLight: 200, 230, 201;
+  --v-theme-primary: 76, 175, 80;
+  --v-theme-primaryDark: 46, 125, 50;
+  --v-theme-secondaryLight: 255, 236, 179;
+  --v-theme-secondary: 255, 160, 0;
+  --v-theme-secondaryDark: 255, 111, 0;
+  --v-theme-accentLight: 187, 222, 251;
+  --v-theme-accent: 33, 150, 243;
+  --v-theme-accentDark: 13, 71, 161;
+}
+
+.money-var {
+  @include money;
+
+  .v-theme--light,
+  .v-theme--dark {
+    @include money;
+  }
+}
+
+@mixin botani {
+  --v-theme-anchor-base: 240, 98, 146;
+  --v-theme-primaryLight: 220, 237, 200;
+  --v-theme-primary: 104, 159, 56;
+  --v-theme-primaryDark: 51, 105, 30;
+  --v-theme-secondaryLight: 252, 228, 236;
+  --v-theme-secondary: 240, 98, 146;
+  --v-theme-secondaryDark: 173, 20, 87;
+  --v-theme-accentLight: 178, 235, 242;
+  --v-theme-accent: 0, 188, 212;
+  --v-theme-accentDark: 0, 131, 143;
+}
+
+.botani-var {
+  @include botani;
+
+  .v-theme--light,
+  .v-theme--dark {
+    @include botani;
+  }
+}
+
+@mixin sport {
+  --v-theme-anchor-base: 213, 0, 249;
+  --v-theme-primaryLight: 204, 255, 144;
+  --v-theme-primary: 85, 187, 19;
+  --v-theme-primaryDark: 51, 105, 30;
+  --v-theme-secondaryLight: 206, 147, 216;
+  --v-theme-secondary: 213, 0, 249;
+  --v-theme-secondaryDark: 106, 27, 154;
+  --v-theme-accentLight: 132, 255, 255;
+  --v-theme-accent: 0, 229, 255;
+  --v-theme-accentDark: 0, 96, 100;
+}
+
+.sport-var {
+  @include sport;
+
+  .v-theme--light,
+  .v-theme--dark {
+    @include sport;
+  }
+}
+
+@mixin kingdom {
+  --v-theme-anchor-base: 244, 67, 54;
+  --v-theme-primaryLight: 255, 209, 128;
+  --v-theme-primary: 255, 109, 0;
+  --v-theme-primaryDark: 230, 81, 0;
+  --v-theme-secondaryLight: 255, 235, 238;
+  --v-theme-secondary: 244, 67, 54;
+  --v-theme-secondaryDark: 229, 57, 53;
+  --v-theme-accentLight: 239, 235, 233;
+  --v-theme-accent: 141, 110, 99;
+  --v-theme-accentDark: 78, 52, 46;
+}
+
+.kingdom-var {
+  @include kingdom;
+
+  .v-theme--light,
+  .v-theme--dark {
+    @include kingdom;
+  }
+}
+
+@mixin vintage {
+  --v-theme-anchor-base: 0, 150, 136;
+  --v-theme-primaryLight: 255, 241, 118;
+  --v-theme-primary: 249, 168, 37;
+  --v-theme-primaryDark: 245, 127, 23;
+  --v-theme-secondaryLight: 178, 223, 219;
+  --v-theme-secondary: 0, 150, 136;
+  --v-theme-secondaryDark: 0, 77, 64;
+  --v-theme-accentLight: 215, 204, 200;
+  --v-theme-accent: 141, 110, 99;
+  --v-theme-accentDark: 78, 52, 46;
+}
+
+.vintage-var {
+  @include vintage;
+
+  .v-theme--light,
+  .v-theme--dark {
+    @include vintage;
+  }
+}
+
+@mixin brown {
+  --v-theme-anchor-base: 121, 72, 72;
+  --v-theme-primaryLight: 215, 204, 200;
+  --v-theme-primary: 121, 85, 72;
+  --v-theme-primaryDark: 78, 52, 46;
+  --v-theme-secondaryLight: 204, 176, 176;
+  --v-theme-secondary: 121, 72, 72;
+  --v-theme-secondaryDark: 62, 39, 35;
+  --v-theme-accentLight: 255, 236, 179;
+  --v-theme-accent: 255, 193, 7;
+  --v-theme-accentDark: 255, 111, 0;
+}
+
+.brown-var {
+  @include brown;
+
+  .v-theme--light,
+  .v-theme--dark {
+    @include brown;
+  }
+}
+
+@mixin cake {
+  --v-theme-anchor-base: 244, 67, 54;
+  --v-theme-primaryLight: 215, 204, 200;
+  --v-theme-primary: 121, 85, 72;
+  --v-theme-primaryDark: 78, 52, 46;
+  --v-theme-secondaryLight: 239, 154, 154;
+  --v-theme-secondary: 244, 67, 54;
+  --v-theme-secondaryDark: 183, 28, 28;
+  --v-theme-accentLight: 197, 225, 165;
+  --v-theme-accent: 104, 159, 56;
+  --v-theme-accentDark: 51, 105, 30;
+}
+
+.cake-var {
+  @include cake;
+
+  .v-theme--light,
+  .v-theme--dark {
+    @include cake;
+  }
+}

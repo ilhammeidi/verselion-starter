@@ -1,0 +1,78 @@
+mixin profile-card(cover, avatar = assets + '/images/avatars/pp_girl.svg', name, title, connection = 0, favorites = 0, albums = 0, type = 'full', orientation = 'portrait', href = '#')  
+  .card.profile-card(class=orientation + ' ' + type)
+    .figure
+      |
+      |
+      .responsive-img(style={'background-image': `url(${cover})`})
+      |
+      |
+    .avatar-img.avatar(class=orientation === 'portrait' ? 'bigger' : 'big')
+      |
+      |
+      img(src=avatar alt='avatar')/
+      |
+      |
+    .properties.text-truncate
+      .card-content
+        |
+        |
+        h6
+          strong #{name}
+        |
+        |
+        .subtitle
+          | #{title}
+        .desc
+          |
+          |
+          span #{connection } Connection
+          |
+          |
+        if orientation === 'portrait'
+          |
+          |
+          a.btn.btn-outlined.primary.waves-effect.main-btn(href=href)
+            | See Profile
+          |
+          |
+      .action-area
+        .card-actions.action
+          |
+          |
+          a.waves-effect.btn.btn-flat(href='#')
+            |
+            |
+            span.btn-content
+              i.icon.material-icons account_circle
+              | #{connection} Connection
+            |
+            |
+          |
+          |
+          a.waves-effect.btn.btn-flat(href='#')
+            |
+            |
+            span.btn-content
+              i.icon.material-icons favorite
+              | #{ favorites } Favorites
+            |
+            |
+          |
+          |
+          a.waves-effect.btn.btn-flat(href='#')
+            |
+            |
+            span.btn-content
+              i.icon.material-icons photo_library
+              | #{albums} Albums
+            |
+            |
+          |
+          |
+        |
+        |
+        if orientation === 'landscape'
+          a.waves-effect.btn.btn-outlined.primary.main-btn.mq-xs-down(href='href' data-class='btn-small')
+            | See Profile
+          |
+          |

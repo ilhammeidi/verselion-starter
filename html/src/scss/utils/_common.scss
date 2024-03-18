@@ -1,0 +1,386 @@
+@mixin title-style {
+  font-size: 48px;
+  line-height: 62px;
+  text-Transform: 'capitalize';
+  font-weight: 700;
+  margin-bottom: 40px;
+  position: relative
+}
+
+@mixin use-text-title {
+  font-weight: $font-bold;
+  font-size: 48px;
+  line-height: 72px;
+  @include breakpoints-down(md) {
+    font-size: 38px;
+    line-height: 60px;
+  }
+  @include breakpoints-down(sm) {
+    font-size: 28px;
+    line-height: 44px;
+  }
+}
+
+@mixin use-text-title2 {
+  font-size: 36px;
+  line-height: 56px;
+  font-weight: $font-bold;
+  @include breakpoints-down(md) {
+    font-size: 32px;
+    line-height: 48px;
+  }
+  @include breakpoints-down(sm) {
+    font-size: 24px;
+    line-height: 36px;
+  }
+}
+
+@mixin use-text-subtitle {
+  font-weight: $font-medium;
+  font-size: 28px;
+  line-height: 44px;
+  @include breakpoints-down(md) {
+    font-size: 24px;
+    line-height: 36px;
+  }
+  @include breakpoints-down(sm) {
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
+
+@mixin use-text-subtitle2 {
+  font-weight: $font-regular;
+  font-size: 22px;
+  line-height: 32px;
+  @include breakpoints-down(md) {
+    font-size: 20px;
+    line-height: 32px
+  }
+  @include breakpoints-down(sm) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+@mixin use-text-paragraph {
+  font-weight: $font-regular;
+  font-size: 16px;
+  line-height: 24px
+}
+
+@mixin use-text-caption {
+  font-weight: $font-regular;
+  font-size: 16px;
+  line-height: 24px;
+  @include breakpoints-down(sm) {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+.use-text {
+  &-title {
+    @include use-text-title;
+  }
+  &-title2 {
+    @include use-text-title2;
+  }
+  &-subtitle {
+    @include use-text-subtitle;
+  }
+  &-subtitle2 {
+    @include use-text-subtitle2;
+  }
+  &-paragraph {
+    @include use-text-paragraph;
+  }
+  &-caption {
+    @include use-text-caption
+  }
+  &-title-primary {
+    @include title-style;
+    .theme--dark & {
+      color: $palette-primary-light
+    }
+    .theme--light & {
+      color: $palette-primary-dark
+    }
+  }
+  &-title-secondary {
+    @include title-style;
+    .theme--dark & {
+      color: $palette-secondary-light
+    }
+    .theme--light & {
+      color: $palette-secondary-dark
+    }
+  }
+  &-primary {
+    .theme--dark & {
+      color: $palette-primary-light
+    }
+    .theme--light & {
+      color: $palette-primary-dark
+    }
+  }
+  &-secondary {
+    .theme--dark & {
+      color: $palette-secondary-light
+    }
+    .theme--light & {
+      color: $palette-secondary-dark
+    }
+  }
+  &-bold {
+    font-weight: $font-bold !important;
+  }
+  &-medium {
+    font-weight: $font-medium !important;
+  }
+  &-regular {
+    font-weight: $font-regular !important;
+  }
+  &-primary-color {
+    color: $palette-primary-main;
+  }
+  &-secondary-color {
+    color: $palette-secondary-main;
+  }
+  &-accent-color {
+    color: $palette-accent-main;
+  }
+}
+
+@mixin use-text-grd($gr-color) {
+  background: $gr-color;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.use-text-grd {
+  &-primary-dark {
+    @include use-text-grd($gradient-primary-dark);
+  }
+  &-primary-light {
+    @include use-text-grd($gradient-primary-light);
+  }
+  &-secondary-dark {
+    @include use-text-grd($gradient-secondary-dark);
+  }
+  &-secondary-light {
+    @include use-text-grd($gradient-secondary-light);
+  }
+  &-accent {
+    @include use-text-grd($gradient-accent);
+  }
+  &-double-light {
+    @include use-text-grd($gradient-double-light);
+  }
+  &-double-main {
+    @include use-text-grd($gradient-double-main);
+  }
+  &-double-dark {
+    @include use-text-grd($gradient-double-dark);
+  }
+  &-triple-light {
+    @include use-text-grd($gradient-triple-light);
+  }
+  &-triple-main {
+    @include use-text-grd($gradient-triple-main);
+  }
+  &-triple-dark {
+    @include use-text-grd($gradient-triple-dark);
+  }
+  &-triple-auto {
+    .theme--dark & {
+      @include use-text-grd($gradient-triple-light);
+    }
+    .theme--light & {
+      @include use-text-grd($gradient-triple-main);
+    }
+  }
+  &-success {
+    background-image: linear-gradient(153deg, #84FF95 0%, #006064 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &-error {
+    background-image: linear-gradient(153deg, #FFBABA 0%, #FF0000 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &-pending {
+    background-image: linear-gradient(153deg, #FFEA84 0%, #FF9000 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &-disabled {
+    background-image: linear-gradient(153deg, #FFEA84 0%, #FF9000 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.use-bg {
+  &-primary-main {
+    background-color: $palette-primary-main;
+    color: #FFF
+  }
+  &-primary-light {
+    background-color: $palette-primary-light;
+    color: $palette-primary-dark
+  }
+  &-primary-dark {
+    background-color: $palette-primary-dark;
+    color: #FFF;
+  }
+  &-secondary-main {
+    background-color: $palette-secondary-main;
+    color: #FFF;
+  }
+  &-secondary-light {
+    background-color: $palette-secondary-light;
+    color: $palette-secondary-dark;
+  }
+  &-secondary-dark {
+    background-color: $palette-secondary-dark;
+    color: #FFF;
+  }
+  &-accent-main {
+    background-color: $palette-accent-main;
+    color: #FFF;
+  }
+  &-accent-light {
+    background-color: $palette-accent-light;
+    color: $palette-accent-dark,
+  }
+  &-accent-dark {
+    background-color: $palette-accent-dark;
+    color: #FFF;
+  }
+  &-accent2-main {
+    background-color: #00BCD4;
+    color: #FFF;
+  }
+  &-accent2-light {
+    background-color: #B2EBF2;
+    color: #006064
+  }
+  &-accent2-dark {
+    background-color: #00838F;
+    color: #FFF
+  }
+}
+
+// Hidden class media query
+.hidden {
+  &-lg-down {
+    @include breakpoints-down(lg) {
+      display: none !important;
+    }
+  }
+  &-md-down {
+    @include breakpoints-down(md) {
+      display: none !important;
+    }
+  }
+  &-sm-down {
+    @include breakpoints-down(sm) {
+      display: none !important;
+    }
+  }
+  &-lg-up {
+    @include breakpoints-up(lg) {
+      display: none !important;
+    }
+  }
+  &-md-up {
+    @include breakpoints-up(md) {
+      display: none !important;
+    }
+  }
+  &-sm-up {
+    @include breakpoints-up(sm) {
+      display: none !important;
+    }
+  }
+  &-lg {
+    @include breakpoints-between(lg, xl) {
+      display: none !important;
+    }
+  }
+  &-md {
+    @include breakpoints-between(md, lg) {
+      display: none !important;
+    }
+  }
+  &-sm {
+    @include breakpoints-between(sm, md) {
+      display: none !important;
+    }
+  }
+}
+
+//Show class media query
+.show {
+  &-lg-down {
+    @include breakpoints-up(lg) {
+      display: none !important;
+    }
+  }
+  &-md-down {
+    @include breakpoints-up(md) {
+      display: none !important;
+    }
+  }
+  &-sm-down {
+    @include breakpoints-up(sm) {
+      display: none !important;
+    }
+  }
+  &-xl-up {
+    @include breakpoints-down(xl) {
+      display: none !important;
+    }
+  }
+  &-lg-up {
+    @include breakpoints-down(lg) {
+      display: none !important;
+    }
+  }
+  &-md-up {
+    @include breakpoints-down(md) {
+      display: none !important;
+    }
+  }
+  &-sm-up {
+    @include breakpoints-down(sm) {
+      display: none !important;
+    }
+  }
+  &-lg {
+    display: none !important;
+    @include breakpoints-between(xl, lg) {
+      display: block !important;
+    }
+  }
+  &-md {
+    display: none !important;
+    @include breakpoints-between(lg, md) {
+      display: block !important;
+    }
+  }
+  &-sm {
+    display: none !important;
+    @include breakpoints-between(md, sm) {
+      display: block !important;
+    }
+  }
+}
+
+.use-rtl-flip {
+  .v-locale--is-rtl & {
+    transform: scale(-1)
+  }
+}
