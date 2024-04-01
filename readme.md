@@ -42,4 +42,4 @@ https://ilhammeidi.github.io/verslion-docs/
  - Navigate to  [http://localhost:3000](http://localhost:3000)
 
 ### License
-This project is licensed under the terms of the [MIT license](https://github.com/ilhammeidi/verselion-starter/LICENSE).
+This project is licensed under the terms of the [MIT license](https://github.com/ilhammeidi/verselion-starter/blob/main/LICENSE).

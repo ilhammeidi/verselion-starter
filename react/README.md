@@ -1,8 +1,8 @@
-# Verselion Starter - React JS Website Template
+# React Starter - React JS Website Template
 ----------
 
 ### Read documentation here
-http://ilhammeidi.github.io/verselion-docs
+https://ilhammeidi.github.io/verslion-docs/react/index.html
 
 ### Template Feature
 - Modern Technologies. Built with one of most popular javascript library React.JS, MUI v5 and Next.JS.
@@ -17,11 +17,11 @@ http://ilhammeidi.github.io/verselion-docs
 - And many more…
 
 # Get All Landing Page Collection
-![verslion](https://ilhammeidi.github.io/verselion-docs/images/banner.jpg)
+![verslion](https://firebasestorage.googleapis.com/v0/b/enlite-3a841.appspot.com/o/Dark%20Light.jpg?alt=media&token=c97d51ba-ac1d-4618-8ec3-b4df63336189)
 
-[GET IT NOW on Envato](https://themeforest.net/user/ilhammeidi/portfolio)
+[GET IT NOW on Envato Market](https://bit.ly/3xeTsEN)
 
-[SEE DEMO](http://verselion.ux-maestro.com/)
+[SEE DEMO](https://bit.ly/3vmqcxs)
 
 ### Installation
 

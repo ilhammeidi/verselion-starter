@@ -1,8 +1,8 @@
-# Awrora Starter - Vue 3 Landing Page Template
+# Vue Starter - Vue 3 Landing Page Template
 ----------
 
 ### Read documentation here
-http://ilhammeidi.github.io/awrora-docs
+https://ilhammeidi.github.io/verslion-docs/vue/index.html
 
 ### Template Feature
 - Modern Technologies. Built with one of most popular javascript library Vue 3, Vuetify and Nuxt.JS with SSR
@@ -20,11 +20,11 @@ http://ilhammeidi.github.io/awrora-docs
 - And many more…
 
 # Get All Landing Page Collection
-![Awrora](https://ilhammeidi.github.io/awrora-docs/images/banner.jpg)
+![Awrora](https://firebasestorage.googleapis.com/v0/b/enlite-3a841.appspot.com/o/Pages.jpg?alt=media&token=a5e9375c-80c2-443d-903f-394c8bfe5f8a)
 
-[GET IT NOW on Envato](https://themeforest.net/item/awrora-vue-js-landing-page-collection/31173494)
+[GET IT NOW on Envato Market](https://bit.ly/3xeTsEN)
 
-[SEE DEMO](https://awrora.netlify.app/)
+[SEE DEMO](https://bit.ly/3vmqcxs)
 
 ### Installation
 
