@@ -1,6 +1,6 @@
 ### React Vue HTML Starter - A Website Starter Pack
 ----------
-**Verselion Starter** is website starter projecy. Available in 3 powerful versions: React, Vue, and HTML**. Whether you're a fan of the robust functionality of React, the elegant simplicity of Vue, or the timeless flexibility of HTML, our template offers a seamless solution for your web development needs.
+**Verselion Starter** is website starter projecy. Available in 3 powerful versions: **React, Vue, and HTML**. Whether you're a fan of the robust functionality of React, the elegant simplicity of Vue, or the timeless flexibility of HTML, our template offers a seamless solution for your web development needs.
 
 ### Read full documentation here
 https://ilhammeidi.github.io/verslion-docs/
